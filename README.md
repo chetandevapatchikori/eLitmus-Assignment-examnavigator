@@ -107,6 +107,23 @@ chrome.tabs.onActivated.addListener(function (activeInfo) {
     ],
 ```
 ---
+### 2. The browser should open in full screen mode.
+``` javascript
+		// Function for full screen activation
+		function activate(ele) {
+			if (ele.requestFullscreen) {
+				ele.requestFullscreen();
+			}
+		}
+
+		// Function for full screen activation
+		function deactivate() {
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			}
+		}
+```
+---
 ### 3. Pop up should be shown when someone switches between 2 tabs or Application.
 + In the background.js it should observe whether a person is switching the tab while writing the exam and show alert message  as “You switched to tab – “. 
 ```javascript
